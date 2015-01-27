@@ -1,0 +1,48 @@
+<ng-include src="'app/views/nav.html'"></ng-include>
+<div ng-show="haveURL()">
+	<div class="page-header">
+		<div class="container">
+			<h1>Video Streaming!</h1>
+			<p>Stream some videos from AWS s3.</p>
+		</div>
+	</div>
+	<div class="container">
+		<h3 ng-show="media.films.length > 0">Films</h3>
+		<div class="row">
+			<div class="col-xs-9">
+				<div class="row">
+					<div class="col-md-3" ng-repeat="film in media.films | orderBy:'title' | filter:search">
+						<div class="thumbnail">
+							<a ng-href="#/{{film.title}}">
+								<img ng-src="{{getItem('urlRoot')}}{{film.poster}}" alt="{{film.title}}">
+								<div class="caption">
+									<h4 class="title-match">{{film.title}}</h4>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-3 well">
+				<h4>Toolbar</h4>
+				<div class="form-group">
+					<label for="textFilter">Search</label>
+					<input type="text" class="form-control" id="textFilter" placeholder="Search by title" ng-model="search">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div ng-show="!haveURL()">
+	<div class="page-header">
+		<div class="container">
+			<h1>No s3 bucket set!</h1>
+
+			<div class="form-group">
+				<label for="exampleInputEmail1">set the cloudfront URL</label>
+				<input type="text" class="form-control" placeholder="Cloudfront URL for s3 bucket" ng-model="cfURL">
+			</div>
+			<button class="btn btn-warning" ng-show="cfURL" ng-click="setURL()">Submit</button>
+		</div>
+	</div>
+</div>

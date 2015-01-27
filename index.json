@@ -1,0 +1,47 @@
+{
+	"films":[
+		{
+			"title":"Ponyo",
+			"sources": [
+				{"file":"ponyo.mp4","type": "video/mp4"}
+			],
+			"poster":"ponyo.jpg",
+			"genres":[
+				"comedy","anime","family"
+			]
+		},
+		{
+			"title":"Kiki's Delivery Service",
+			"sources": [
+				{"file":"kiki.mp4","type": "video/mp4"}
+			],
+			"poster":"kiki.jpg",
+			"genres":[
+				"comedy","anime","family"
+			]
+		},
+		{
+			"title":"My Neighbor Totoro",
+			"sources": [
+				{"file":"totoro.mp4","type": "video/mp4"}
+			],
+			"poster":"totoro.jpg",
+			"genres":[
+				"comedy","anime","family"
+			]
+		},
+		{
+			"title":"Castle in the Sky",
+			"sources": [
+				{"file":"castle_in_the_sky.mp4","type": "video/mp4"}
+			],
+			"poster":"castle_in_the_sky.jpg",
+			"genres":[
+				"comedy","anime","family"
+			]
+		}
+	],
+	"series":[
+
+	]
+}

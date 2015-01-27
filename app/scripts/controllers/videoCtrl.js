@@ -23,7 +23,6 @@ vidStreamer.controller('VideoCtrl', function ($scope,$rootScope,$sce,$state,$sta
 
 		$scope.config = {
 			sources: fileSources,
-			theme: "../../bower_components/videogular-themes-default/videogular.min.css",
 			plugins: {
 				poster: $rootScope.getItem('urlRoot') + $scope.video.poster
 			}
